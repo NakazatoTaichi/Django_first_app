@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 style="padding: 10px;">日記の削除</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ diary.date }} {{ diary.title }} を削除します</p>
+        <input type="submit" value="削除">
+    </form>
+{% endblock %}

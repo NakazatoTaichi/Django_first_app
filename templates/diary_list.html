@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 style="padding: 10px;">日記の一覧</h1>
+    {% for diary in diary_list %}
+    <p style="padding: 10px;">
+        {{ diary.date }}
+        <a href="{% url 'diary:diary_detail' diary.pk %}">{{ diary.title }}</a>
+    </p>
+    {% endfor %}
+    <a href="{% url 'diary:index' %}">戻る</a>
+{% endblock %}
+
+

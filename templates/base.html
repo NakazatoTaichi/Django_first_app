@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="jp">
+{% bootstrap_css %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDjangoApp</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <h1>Diary App</h1>
+        </div>
+    </nav>
+    <div class="container" text-algin="center">
+    <!-- <a href="{% url 'account_logout' %}">ログアウト</a> -->
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
